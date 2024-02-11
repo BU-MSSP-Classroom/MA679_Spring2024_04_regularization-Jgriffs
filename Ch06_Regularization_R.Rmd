@@ -62,12 +62,26 @@ library(AmesHousing)
 ?ames_raw
 ```
 
-### Questions
+### Questions   ... Regsubsets won't load? issue with url from CRAN ?
 
 Use data of `ames_raw` up to 2008 predict the housing price for the later years.
 ```{r,echo=show_code}
 ames_raw_2008=ames_raw[ames_raw$`Yr Sold`<2008,]
 ames_raw_2009=ames_raw[ames_raw$`Yr Sold`>=2008,]
+
+#
+# 
+# Ames_F <- regsubsets(Sa ~ ., data = Hitters,
+#     nvmax = 19, method = "forward")
+# summary(Ames_F)
+# 
+# Ames_B <- regsubsets(Salary ~ ., data = Hitters,
+#     nvmax = 19, method = "backward")
+# summary(Ames_B)
+
+
+
+
 ```
 
 Use the same loss function calculator.
